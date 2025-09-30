@@ -7,6 +7,6 @@ opencv-python==4.9.0.80
 pillow==10.4.0
 numpy==1.26.4
 
-# PyTorch CPU (compatibles con Python 3.9)
-torch==2.0.1
-torchvision==0.15.2
+# PyTorch CPU (par compatible con lo que el índice ofrece)
+torch==2.5.1
+torchvision==0.20.1
