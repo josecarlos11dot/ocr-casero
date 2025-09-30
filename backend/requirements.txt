@@ -7,5 +7,5 @@ opencv-python-headless==4.9.0.80
 pillow==10.4.0
 numpy==1.26.4
 
-torch==2.5.1+cpu
+torch==2.6.0+cpu
 torchvision==0.21.0+cpu
