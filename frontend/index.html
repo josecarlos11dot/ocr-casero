@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>OCR Casero</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; padding:16px; background:#0b0f14; color:#e7eef7; }
+    h1 { margin:0 0 12px; font-size:20px; }
+    .wrap { display:grid; gap:12px; max-width:520px; margin:0 auto; }
+    video, canvas, img { width:100%; border-radius:8px; background:#111; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    button { padding:12px 16px; border:none; border-radius:8px; font-weight:600; cursor:pointer; }
+    .primary { background:#2b66ff; color:#fff; }
+    .ghost { background:#1b2430; color:#e7eef7; }
+    .out { background:#0f1720; padding:12px; border-radius:8px; min-height:56px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space:pre-wrap; }
+    .small { font-size:12px; opacity:.8; }
+    label input { display:none; }
+    label { display:inline-block; padding:12px 16px; border-radius:8px; background:#1b2430; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>OCR Casero (Vercel + Render)</h1>
+
+    <video id="video" playsinline autoplay muted></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <div class="row">
+      <button id="btnShot" class="primary">📸 Capturar</button>
+      <label>📂 Subir imagen<input type="file" id="fileInput" accept="image/*" /></label>
+    </div>
+
+    <img id="preview" alt="preview" style="display:none;" />
+
+    <div class="row">
+      <button id="btnSend" class="ghost">🚀 Enviar a OCR</button>
+      <button id="btnReset" class="ghost">♻️ Reset</button>
+    </div>
+
+    <div id="out" class="out"></div>
+    <div class="small">HTTPS listo para iPhone. /api/* se reescribe al backend.</div>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
